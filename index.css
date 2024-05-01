@@ -29,10 +29,6 @@ li:first-child {
     font-weight: 700;
 }
 
-li:hover, li:active {
-    text-decoration-line: underline;
-}
-
 button {
     font-size: 30px;
     font-weight: 700;
@@ -45,6 +41,19 @@ h2 {
 
 li, p {
     font-size: 25px;
+}
+
+/* NON-COLOR EFFECTS */
+
+li:hover, li:active {
+    text-decoration-line: underline;
+}
+
+li:hover,
+li:active,
+button:hover,
+.account-info:hover {
+    cursor: pointer;
 }
 
 
