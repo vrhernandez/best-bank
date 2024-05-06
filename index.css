@@ -1,90 +1,22 @@
-/*
-COLOR PALETTE
-
-BLACK: #000000
-
-WHITE: #FFFFFF
-LIGHT: #FDF7F4
-
-ORANGE: #FFD18C
-DARK ORANGE: #FFA724
-*/
-
-
 html, body {
     margin: 0;
     padding: 0;
     text-align: center;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-}
-
-/* TYPOGRAPHY */
-
-li {
-    font-weight: 400;
-}
-
-li:first-child {
-    font-weight: 700;
-}
-
-button {
-    font-size: 30px;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 40px;
-    text-align: left;
-}
-
-li, p {
     font-size: 25px;
 }
 
-/* NON-COLOR EFFECTS */
-
-li:hover, li:active {
-    text-decoration-line: underline;
-}
-
-li:hover,
-li:active,
-button:hover,
-.account-info:hover {
-    cursor: pointer;
-}
 
 
-/* PALETTE */
+/****** GENERAL LAYOUT *****/
 
-main {
-    background-color: #FDF7F4;
-}
-
-.mid-bg, .account-info:hover {
-    background-color: #FFD18C;
-}
-
-.dark-border {
-    border: 5px solid #FFA724;
-}
-
-button, .account-info{
-    background-color: #FFFFFF;
-}
-
-button:hover, .account-info:active {
-    background-color: #FFA724;
-}
-
-
-/* LAYOUT */
-
-.logo {
-    margin: 39px;
-    max-width: 373px;
+:root {
+    --color-white: #fff;
+    --color-light: #FDF7F4;
+    --color-mid: #FFD18C;
+    --color-dark: #FFA724;
+    --color-black: #000;
 }
 
 .container {
@@ -92,8 +24,49 @@ button:hover, .account-info:active {
     margin: 0 auto;
 }
 
+.dark-border {
+    border: 5px solid var(--color-dark);
+}
+
+a:hover,
+button:hover,
+.account-info:hover {
+    cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible,
+.account-info:focus-visible {
+    outline: 3px solid var(--color-dark);
+    outline-offset: 3px;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important; 
+    -webkit-clip-path: inset(50%) !important;
+        clip-path: inset(50%) !important; 
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;            
+}
+
+
+
+/***** HEADER *****/
+
+.logo {
+    margin: 39px;
+    max-width: 373px;
+}
+
 nav {
     padding: 18px 0;
+    background-color: var(--color-mid);
 }
 
 .menu {
@@ -104,10 +77,34 @@ nav {
     justify-content: space-between;
 }
 
+li:first-child a {
+    font-weight: 700;
+}
+
+.menu a {
+    font-weight: 400;
+    text-decoration-line: none;
+    color: var(--color-black);
+    border-radius: 5px;
+}
+
+.menu a:hover,
+.menu a:focus,
+.menu a:active {
+    text-decoration-line: underline;
+}
+
+
+
+/***** MAIN AREA *****/
+
 main {
     padding-top: 33px;
     padding-bottom: 90px;
+    background-color: var(--color-light);
 }
+
+/* button section */
 
 .quick-btns {
     display: flex;
@@ -120,10 +117,25 @@ button {
     padding: 20px;
     border-radius: 50px;
     width: 275px;
+    font-size: 30px;
+    font-weight: 700;
+    background-color: var(--color-white);
 }
+
+button:hover, button:focus-visible {
+    background-color: var(--color-dark);
+}
+
+button:active {
+    border-color: var(--color-light);
+}
+
+/* account section */
 
 h2 {
     margin-bottom: 25px;
+    font-size: 40px;
+    text-align: left;
 }
 
 .accounts {
@@ -137,24 +149,17 @@ h2 {
     justify-content: space-between;
     padding: 44px;
     border-radius: 15px;
+    background-color: var(--color-white);
+}
+
+.account-info:hover, .account-info:focus {
+    background-color: var(--color-mid);
+}
+
+.account-info:active {
+    background-color: var(--color-dark);
 }
 
 p {
     margin: 0;
-}
-
-
-/* Accessibility */
-.sr-only {
-    border: 0 !important;
-    clip: rect(1px, 1px, 1px, 1px) !important; 
-    -webkit-clip-path: inset(50%) !important;
-        clip-path: inset(50%) !important; 
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important;
-    white-space: nowrap !important;            
 }

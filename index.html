@@ -1,6 +1,7 @@
 <!doctype html>
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <title>BestBank</title>
         <link rel="stylesheet" href="index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,23 +12,23 @@
         <header>
             <img class="logo" src="assets/bestbank_logo.png" alt="BestBank pyramid logo">
             <h1 class="sr-only">BestBank</h1>
-            <nav class="mid-bg">
+            <nav>
                 <div class="container">
                     <ul class="menu">
                         <li>
-                            Home
+                            <a href="">Home</a>
                         </li>
                         <li>
-                            Payments
+                            <a href="">Payments</a>
                         </li>
                         <li>
-                            Savings
+                            <a href="">Savings</a>
                         </li>
                         <li>
-                            Financing
+                            <a href="">Financing</a>
                         </li>
                         <li>
-                            Stocks
+                            <a href="">Stocks</a>
                         </li>
                     </ul>
                 </div>
@@ -35,29 +36,29 @@
         </header>
         <main>
             <div class="container">
-                <div class="quick-btns">
+                <section class="quick-btns">
                     <button class="dark-border">Pay</button>
                     <button class="dark-border">Transfer</button>
-                </div>
+                </section>
 
-                <section>
+                <article>
                     <h2>Accounts</h2>
                     <div class="accounts">
-                        <div class="account-info dark-border">
+                        <div class="account-info dark-border" tabindex="0">
                             <p>Main Account</p>
                             <p>$ 6,700.56</p>
                         </div>
-                        <div class="account-info dark-border">
+                        <div class="account-info dark-border" tabindex="0">
                             <p>Expenses</p>
                             <p>$ 5,134.63</p>
                         </div>
-                        <div class="account-info dark-border">
+                        <div class="account-info dark-border" tabindex="0">
                             <p>Savings</p>
                             <p>$ 36,500.12</p>
                         </div>
                     </div>
-                </section>
-        </div>
+                </article>
+            </div>
         </main>
         <script src="index.js"></script>
     </body>
