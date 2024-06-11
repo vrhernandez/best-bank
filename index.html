@@ -38,25 +38,19 @@
             <div class="container">
                 <section class="quick-btns">
                     <button class="dark-border">Pay</button>
-                    <button class="dark-border">Transfer</button>
+                    <button class="dark-border">Spendings</button>
                 </section>
 
-                <article>
-                    <h2>Accounts</h2>
-                    <div class="accounts">
-                        <div class="account-info dark-border" tabindex="0">
-                            <p>Main Account</p>
-                            <p>$ 6,700.56</p>
-                        </div>
-                        <div class="account-info dark-border" tabindex="0">
-                            <p>Expenses</p>
-                            <p>$ 5,134.63</p>
-                        </div>
-                        <div class="account-info dark-border" tabindex="0">
-                            <p>Savings</p>
-                            <p>$ 36,500.12</p>
-                        </div>
-                    </div>
+                <article class="accts-and-spend">
+                    <section class="info-column">
+                        <h2 class="align-left">Accounts</h2>
+                        <div id="accts-list" class="info-rows"></div>
+                    </section>
+    
+                    <section class="info-column">
+                        <h2 class="align-left">Spendings</h2>
+                        <div id="spend-list" class="info-rows"></div>
+                    </section>
                 </article>
             </div>
         </main>
